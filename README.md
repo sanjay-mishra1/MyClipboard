@@ -5,7 +5,10 @@ share your clipboard data into other devices in realtime.
 ## Getting Started
 
 This project is developed in java 8.0 and require an windows machine to use the exe file included. This project also have the web files where the clipboard data is received.
-
+### Running Example
+``````
+https://myclipboards.web.app/
+````
 ### Prerequisites
 
 Require JAVA 8.0 or above
@@ -40,14 +43,17 @@ To deploy the web hosting on firebase hosting
 write 
 Firebase deploy
 
-## Running the tests
+## Screeshots
 
-Explain how to run the automated tests for this system
+Windows software
+![Screenshot](soft1.png)![Screenshot](soft2.png)
+Website 
+![Screenshot](web1.png)![Screenshot](web2.png)
 
 
 ## Deployment
 
-On successully created you need to upload the exe file on firebase storage. Copy the downloaded link and paste to the login.html file. Finally you need to test the realtime functions by opening the .exe file.
+On successully created, you need to upload the exe file on firebase storage. Copy the downloaded link and paste to the login.html file. Finally you need to test the realtime functions by opening the .exe file.
 
 ## Built With
 
@@ -71,7 +77,7 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
-
+Special thaank to
 * Brandon Gresham
 * https://github.com/bane73/firebase4j
 
