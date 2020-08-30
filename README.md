@@ -1,80 +1,70 @@
 # MyClipboard
 
-One Paragraph of project description goes here
+share your clipboard data into other devices in realtime.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+This project is developed in java 8.0 and require an windows machine to use the exe file included. This project also have the web files where the clipboard data is received.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+Require JAVA 8.0 or above
+Firebase project with open access.
 
+Uses firebase services
 ```
-Give examples
+Require
+firebase authentication
+Firebase Realtime Database
+Firebase Hosting
 ```
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
+Require eclipse to clone this github repositories.
+Configure Firebase
 ```
-Give the example
-```
-
-And repeat
-
-```
-until finished
+Enable email authentication in Firebase authentication.
+Enable Reatime Database by clicking on the create database option
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+For web hosting
+
+```
+Require npm
+Firebase Admin SDK
+Firebase tools
+```
+
+To deploy the web hosting on firebase hosting
+write 
+Firebase deploy
 
 ## Running the tests
 
 Explain how to run the automated tests for this system
 
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+On successully created you need to upload the exe file on firebase storage. Copy the downloaded link and paste to the login.html file. Finally you need to test the realtime functions by opening the .exe file.
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [HttpCLient](https://github.com/apache/httpcomponents-client) - The Http request framework used
+* [HttpCore](https://github.com/apache/httpcomponents-core) - The http client core
+* [jackson](https://github.com/FasterXML/jackson) - The standard JSON library for Java 
+* [Firebase4j](https://github.com/bane73/firebase4j) - The firebase library for rest api functionallity
 
 ## Contributing
 
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Sanjay Mishra** - *Initial work* - [Sanjay Mishra](https://github.com/sanjay-mishra1)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
@@ -82,7 +72,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Brandon Gresham
+* https://github.com/bane73/firebase4j
+
 
