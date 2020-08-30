@@ -1,6 +1,5 @@
 # MyClipboard
-
-share your clipboard data into other devices in realtime.
+Share your clipboard data into other devices in realtime.
 
 ## Getting Started
 
@@ -52,7 +51,10 @@ Windows software
 ![Screenshot](soft2.png)
 
 Website 
+
 ![Screenshot](web1.png)
+
+
 ![Screenshot](web2.png)
 ## Deployment
 
