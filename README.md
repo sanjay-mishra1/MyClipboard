@@ -51,14 +51,12 @@ Windows software
 
 ![Screenshot](soft2.png)
 
-
 Website 
 
 ![Screenshot](web1.png)
 
+
 ![Screenshot](web2.png)
-
-
 ## Deployment
 
 On successully created, you need to upload the exe file on firebase storage. Copy the downloaded link and paste to the login.html file. Finally you need to test the realtime functions by opening the .exe file.
