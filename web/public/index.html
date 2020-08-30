@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>My Clipboard</title>
+    <!--favicon-->
+    <link rel="icon" href="icon.ico" type="image/x-icon">
+   
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+    <!-- update the version number as needed -->
+   <script defer src="/__/firebase/7.18.0/firebase-app.js"></script>
+    <!-- <script defer src="/__/firebase/7.18.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.18.0/firebase-firestore.js"></script>-->
+    <script defer src="/__/firebase/7.18.0/firebase-database.js"></script>
+    <!-- <script defer src="/__/firebase/7.18.0/firebase-messaging.js"></script> -->
+    <!-- <script defer src="/__/firebase/7.18.0/firebase-storage.js"></script> --> 
+    <script defer src="/__/firebase/init.js"></script> 
+
+    <style media="screen">
+      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
+      #message h2 { color: #7934f3; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
+      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+      #message button,a { border-color: transparent;display: block; text-align: center; background: #7934f3; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #info #title{color: #acacac;font-size: small;}
+      #info #desc{color: #000000;margin-top: -9px;font-size: 14px;}
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      .fa{
+        font-size: 13.7px;
+    }
+    .tooltip {
+      position: relative;
+      display: inline-block;
+     
+  }
+  
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 140px;
+      background-color: #555;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px;
+      position: absolute;
+      z-index: 1;
+      bottom: 150%;
+      left: 50%;
+      margin-left: -63px;
+      opacity: 0;
+      text-transform: none;
+      transition: opacity 0.3s;
+    }
+    
+    .tooltip .tooltiptext::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: #555 transparent transparent transparent;
+    }
+   
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+     
+      }
+      #logoutText{
+        display: inline;
+      }
+      #searchText{
+        display: none;
+      }
+      img {
+        margin-top: 1%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 21%;
+    display: none;
+      }  
+      table{
+        display: none;
+      }
+      p{
+        overflow-wrap: anywhere;
+      }
+      @media (max-width: 600px) {
+        body, #message { margin-top: 0; background: white; box-shadow: none; }
+        body { border-top: 16px solid #7934f3; }
+          
+        #logoutText{
+          display: none;
+        }
+        #searchText{
+          display: inline;
+        }
+        img{
+          margin-top: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 21%;
+          display: block;
+          content:url("./icon.ico");
+        }
+        .logout_bt{
+          visibility: hidden;
+        }
+        table{
+          display: inline;
+        }
+      }
+      
+    </style>
+  
+  </head>
+  <body style="visibility: hidden;">
+    <img  >
+    <table id="user_info">
+      <tbody><tr><th style="
+    width: 100%;
+    text-align: left;">
+       <p><p  style="margin-left: 9%;"><i class="fa fa-user" style="font-size: 17px;"></i><span id="username"></span> </p>
+      </th>
+      <th style="width: 100%;text-align: right;">
+    <button onclick="logout()" style=" padding: 6px; margin: 10px;
+    padding: 6px;
+    margin-left: 27px;
+    background-color: #7934f3;
+    color: #fff;
+    border: none;">Logout</button>
+  </th>
+  </tr></tbody></table>
+  
+    <div id="message" >
+
+      <h2  id="page_title">Connecting...</h2>
+
+      <h1 id="sub_title"></h1>
+      <p id="data" style="visibility:hidden; padding: 8px;box-shadow: 0 1px 3px rgb(0 0 0 / 58%), 0 1px 2px rgba(0,0,0,0.24);  margin-top: 10%;"></p>
+      <div style="display: flex;visibility: hidden;" id="btGroup">
+      <div class="tooltip"  style='margin-top:20%'>
+        <a onclick="copyToClipboard()"  onmouseout="outFunc()" style="width: 100%;">
+          <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+          Copy text
+          </a>
+        </div>
+        <a id="searchBt" target="_blank" onclick="searchGoogle()" style=" width: 36%;margin-left: auto;margin-top:20%"><Span id="searchText">Search</Span><Span id="logoutText">Logout</Span></a>
+    </div>
+  </div>
+
+    
+    <p id="load">&hellip;</p>
+    <script src="js/main3.js"></script>
+  </body>
+</html>
