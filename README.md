@@ -46,9 +46,9 @@ Firebase deploy
 ## Screeshots
 
 Windows software
-![Screenshot1](soft1.png)![Screenshot1](soft2.png)
+![Screenshot](soft1.png)![Screenshot](soft2.png)
 Website 
-![Screenshot1](web1.png)![Screenshot1](web2.png)
+![Screenshot](web1.png)![Screenshot](web2.png)
 
 
 ## Deployment
