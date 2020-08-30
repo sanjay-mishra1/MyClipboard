@@ -6,9 +6,9 @@ share your clipboard data into other devices in realtime.
 
 This project is developed in java 8.0 and require an windows machine to use the exe file included. This project also have the web files where the clipboard data is received.
 ### Running Example
-``````
-https://myclipboards.web.app/
-````
+```
+https://myclipboards.web.app
+```
 ### Prerequisites
 
 Require JAVA 8.0 or above
@@ -46,9 +46,9 @@ Firebase deploy
 ## Screeshots
 
 Windows software
-![Screenshot](soft1.png)![Screenshot](soft2.png)
+![Screenshot1](soft1.png)![Screenshot1](soft2.png)
 Website 
-![Screenshot](web1.png)![Screenshot](web2.png)
+![Screenshot1](web1.png)![Screenshot1](web2.png)
 
 
 ## Deployment
