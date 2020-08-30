@@ -52,10 +52,7 @@ Windows software
 ![Screenshot](soft2.png)
 
 Website 
-
 ![Screenshot](web1.png)
-
-
 ![Screenshot](web2.png)
 ## Deployment
 
